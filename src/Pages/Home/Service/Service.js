@@ -1,7 +1,8 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Service = ({ service }) => {
-    const { name, price, time, img, detail } = service;
+    const { id, name, price, img, detail } = service;
     return (
         <div>
             <div class="col">
@@ -14,7 +15,9 @@ const Service = ({ service }) => {
 
                     </div>
                     <div class="card-footer">
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <Link to={`/Booking/${id}`}>
+                            <button className="btn btn-warning">Send Items</button>
+                        </Link>
                     </div>
                 </div>
             </div>

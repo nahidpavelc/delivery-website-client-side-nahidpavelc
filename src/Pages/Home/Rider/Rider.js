@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Rider = ({ rider }) => {
-    const { name, type, time, img, detail } = rider;
+    const { name, time, img, detail } = rider;
 
     return (
         <div>
@@ -15,7 +15,7 @@ const Rider = ({ rider }) => {
 
                     </div>
                     <div class="card-footer">
-                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                        <a href="/" class="btn btn-primary">Go somewhere</a>
                     </div>
                 </div>
             </div>

@@ -11,7 +11,7 @@ const Riders = () => {
     }, [])
 
     return (
-        <div className="container">
+        <div className="container" id="riders">
             <h2 className='m-5'> Our Riders</h2>
             <div class="row row-cols-1 row-cols-md-3 g-4">
                 {
