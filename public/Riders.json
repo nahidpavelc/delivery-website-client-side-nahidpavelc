@@ -1,0 +1,50 @@
+[
+    {
+        "id": 1,
+        "name": "peter han",
+        "type": "Food Delivery",
+        "time": "45m avg",
+        "detail": "Nisl iste vehicula quae commodi varius duis repellat reiciendis nibh labore temporibus?",
+        "img": "https://image.freepik.com/free-photo/satisfied-deliveryman-with-helmet-driving-yellow-scooter-while-holding-pizza-box_273609-31973.jpg"
+    },
+    {
+        "id": 2,
+        "name": "peter han",
+        "type": "Food Delivery",
+        "time": "45m avg",
+        "detail": "Nisl iste vehicula quae commodi varius duis repellat reiciendis nibh labore temporibus?",
+        "img": "https://image.freepik.com/free-photo/satisfied-deliveryman-with-helmet-driving-yellow-scooter-while-holding-pizza-box_273609-31973.jpg"
+    },
+    {
+        "id": 3,
+        "name": "peter han",
+        "type": "Food Delivery",
+        "time": "45m avg",
+        "detail": "Nisl iste vehicula quae commodi varius duis repellat reiciendis nibh labore temporibus?",
+        "img": "https://image.freepik.com/free-photo/satisfied-deliveryman-with-helmet-driving-yellow-scooter-while-holding-pizza-box_273609-31973.jpg"
+    },
+    {
+        "id": 4,
+        "name": "peter han",
+        "type": "Food Delivery",
+        "time": "45m avg",
+        "detail": "Nisl iste vehicula quae commodi varius duis repellat reiciendis nibh labore temporibus?",
+        "img": "https://image.freepik.com/free-photo/satisfied-deliveryman-with-helmet-driving-yellow-scooter-while-holding-pizza-box_273609-31973.jpg"
+    },
+    {
+        "id": 5,
+        "name": "peter han",
+        "type": "Food Delivery",
+        "time": "45m avg",
+        "detail": "Nisl iste vehicula quae commodi varius duis repellat reiciendis nibh labore temporibus?",
+        "img": "https://image.freepik.com/free-photo/satisfied-deliveryman-with-helmet-driving-yellow-scooter-while-holding-pizza-box_273609-31973.jpg"
+    },
+    {
+        "id": 6,
+        "name": "peter han",
+        "type": "Food Delivery",
+        "time": "45m avg",
+        "detail": "Nisl iste vehicula quae commodi varius duis repellat reiciendis nibh labore temporibus?",
+        "img": "https://image.freepik.com/free-photo/satisfied-deliveryman-with-helmet-driving-yellow-scooter-while-holding-pizza-box_273609-31973.jpg"
+    }
+]

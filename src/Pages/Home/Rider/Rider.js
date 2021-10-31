@@ -1,7 +1,8 @@
 import React from 'react';
 
-const Service = ({ service }) => {
-    const { name, price, time, img, detail } = service;
+const Rider = ({ rider }) => {
+    const { name, type, time, img, detail } = rider;
+
     return (
         <div>
             <div class="col">
@@ -9,7 +10,7 @@ const Service = ({ service }) => {
                     <img src={img} class="card-img-top" alt="..." />
                     <div class="card-body">
                         <h5 class="card-title">{name}</h5>
-                        <h6>Cost: {price}</h6>
+                        <h6>Delivery Time: {time}</h6>
                         <p class="card-text">{detail}</p>
 
                     </div>
@@ -22,4 +23,4 @@ const Service = ({ service }) => {
     );
 };
 
-export default Service;
+export default Rider;
