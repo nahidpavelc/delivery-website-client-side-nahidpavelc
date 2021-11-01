@@ -1,8 +1,9 @@
 import React from 'react';
 import { Button, Container, Nav, Navbar } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
 import useAuth from '../../../hooks/useAuth';
 import logo1 from '../../../images/food-delivery-logo.png';
+import logo2 from '../../../images/icon/icon (2).png';
+import logo3 from '../../../images/icon/icon (3).png';
 import { HashLink } from 'react-router-hash-link';
 
 const Header = () => {
@@ -32,7 +33,7 @@ const Header = () => {
 
                         <Nav>
                             <Navbar.Text>
-                                <a href="#login">{user?.displayName}</a>
+                                <button className="btn btn-dark">{user?.displayName}</button>
                             </Navbar.Text>
                             {user?.email ?
                                 <Nav.Link as={HashLink} to="/">
@@ -42,6 +43,13 @@ const Header = () => {
                                     <Button className="btn btn-success">Login</Button>
                                 </Nav.Link>
                             }
+                            <Nav.Link as={HashLink} to="/MyCart">
+                                <Button className="btn btn-success"><img style={{ width: "25px" }} src={logo2} alt="" />MyCart</Button>
+                            </Nav.Link>
+                            <Nav.Link as={HashLink} to="/AddService">
+                                <Button className="btn btn-danger"><img style={{ width: "25px" }} src={logo3} alt="" />Admin</Button>
+                            </Nav.Link>
+
                         </Nav>
 
                     </Navbar.Collapse>
