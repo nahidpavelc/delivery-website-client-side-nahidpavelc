@@ -7,7 +7,7 @@ const AddDelivery = () => {
 
     const onSubmit = data => {
         console.log(data);
-        axios.post('http://localhost:5000/orders', data)
+        axios.post('https://fierce-sierra-61655.herokuapp.com/orders', data)
             .then(res => {
                 console.log(res);
                 if (res.data.insertedId) {
