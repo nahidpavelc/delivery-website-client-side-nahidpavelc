@@ -1,5 +1,6 @@
 import React from 'react';
 import './Footer.css';
+import logo1 from '../../../images/food-delivery-logo.png';
 
 const Footer = () => {
     return (
@@ -27,7 +28,13 @@ const Footer = () => {
                         <div className="col-12">
                             <div className="row row-2">
                                 <div className="col-sm-3 text-md-center">
-                                    <h5><span> <i className="fa fa-firefox text-light" aria-hidden="true"></i></span><b> BDGO </b></h5>
+                                    <h3><img
+                                        alt="Logo"
+                                        src={logo1}
+                                        width="30"
+                                        height="30"
+                                        className="d-inline-block align-top"
+                                    /> <span>BD</span><span className="text-warning">GO</span></h3>
                                 </div>
                                 <div className="col-sm-3 my-sm-0 mt-5">
                                     <ul className="list-unstyled">
@@ -56,14 +63,14 @@ const Footer = () => {
                     <div className="row justify-content-center mt-0 pt-0 row-1 mb-0 px-sm-3 px-2">
                         <div className="col-12">
                             <div className="row my-4 row-1 no-gutters">
-                                <div className="col-sm-3 col-auto text-center"><small> NahidCh</small></div>
+                                <div className="col-sm-3 col-auto text-center"><span> NahidCh</span></div>
                                 <div className="col-md-3 col-auto "></div>
                                 <div className="col-md-3 col-auto"></div>
                                 <div className="col my-auto text-md-left text-right ">
-                                    <small> hello@Nahidch.com
+                                    <span> hello@Nahidch.com
                                         <span><img src="https://i.imgur.com/TtB6MDc.png" className="img-fluid " width="25" /></span>
                                         <span><img src="https://i.imgur.com/N90KDYM.png" className="img-fluid " width="25" /></span>
-                                    </small> </div>
+                                    </span> </div>
                             </div>
                         </div>
                     </div>

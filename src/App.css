@@ -1,3 +1,38 @@
+.card-footer{
+  background: none;
+}
+h1 {
+  size: 50px;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  position: relative;
+  margin: 40px 60px;
+  color: rgb(245, 245, 245);
+}
+span{
+  color: rgb(0, 148, 20);
+}
+h1::after {
+  content: "";
+  width: 100px;
+  position: absolute;
+  margin: 0 auto;
+  height: 3px;
+  background: #00a008;
+  left: 0;
+  right: 0;
+  bottom: -10px;
+}
+h4{
+  color: #c59100;
+  size: 40px;
+}
+
+
+
+
+
 .App {
   text-align: center;
 }
@@ -12,6 +47,7 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
+
 
 .App-header {
   background-color: #282c34;
