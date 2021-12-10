@@ -13,7 +13,7 @@ const Header = () => {
 
     return (
         <>
-            <Navbar expand="lg" bg="dark" variant="dark" sticky="top">
+            <Navbar expand="lg" bg="dark" variant="dark">
                 <Container>
                     <Navbar.Brand href="#home"><img
                         alt="Logo"
@@ -31,10 +31,13 @@ const Header = () => {
                             <Nav.Link as={HashLink} to="/home#home">Home</Nav.Link>
                             <Nav.Link as={HashLink} to="/home#services">Services</Nav.Link>
                             <Nav.Link as={HashLink} to="/Riders">Riders</Nav.Link>
-                            <Nav.Link as={HashLink} to="/Aboutus">About us</Nav.Link>
+                            <Nav.Link as={HashLink} to="/aboutus">About us</Nav.Link>
                         </Nav>
 
                         <Nav>
+                            <Nav.Link as={HashLink} to="/addservice" className="fw-bold text-danger" style={{ paddingTop: 19 }}
+                            >Admin</Nav.Link>
+
                             {user?.email ?
                                 <button className="btn btn-success">
                                     <NavDropdown title={user?.displayName} id="navbarScrollingDropdown">
@@ -46,10 +49,6 @@ const Header = () => {
                                         <Nav.Link as={HashLink} to="/MyCart">
                                             <img className="ms-1" style={{ width: "25px" }} src={logo2} alt="" />
                                             <span className="text-dark">My Orders</span>
-                                        </Nav.Link>
-                                        <Nav.Link as={HashLink} to="/AddService">
-                                            <img style={{ width: "25px" }} src={logo3} alt="" />
-                                            <span className="text-dark">Admin</span>
                                         </Nav.Link>
                                         <Nav.Link as={HashLink} to="/">
                                             <Button onClick={logOut} className="btn btn-warning">Logout</Button>

@@ -1,3 +1,6 @@
+body{
+  font-family: 'Rubik', sans-serif;
+}
 .card-footer{
   background: none;
 }
@@ -11,7 +14,8 @@ h1 {
   color: rgb(245, 245, 245);
 }
 span{
-  color: rgb(0, 148, 20);
+  color: rgb(16, 189, 39);
+  text-transform: uppercase;
 }
 h1::after {
   content: "";
@@ -19,13 +23,13 @@ h1::after {
   position: absolute;
   margin: 0 auto;
   height: 3px;
-  background: #00a008;
+  background: #06af0e;
   left: 0;
   right: 0;
   bottom: -10px;
 }
 h4{
-  color: #c59100;
+  color: #ffc62b;
   size: 40px;
 }
 
