@@ -5,16 +5,16 @@ const Review = () => {
     const [reviews, setReviews] = useState([])
 
     useEffect(() => {
-        fetch('http://localhost:5000/reviews')
+        fetch('https://fierce-sierra-61655.herokuapp.com/reviews')
             .then(res => res.json())
             .then(data => setReviews(data));
     }, [])
 
     return (
         <div className="container pb-4">
-            <h2 className="m-5"><span>USER</span>  Review</h2>
+            <h2 className="my-5"><span>USER</span>  Review</h2>
 
-            <div class="row row-cols-1 row-cols-md-3 g-4 ">
+            <div class="row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-3  g-4 ">
                 {
                     reviews.map(review => <ReviewCart
                         key={review._id}

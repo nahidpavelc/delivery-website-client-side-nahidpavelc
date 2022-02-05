@@ -40,7 +40,7 @@ const Contact = () => {
         <div className="contactcolor">
             <h2 className="m-5"><span>Contact</span> Us</h2>
 
-            <form ref={form} onSubmit={sendEmail}>
+            <form id="con-form" ref={form} onSubmit={sendEmail}>
                 <input id="name" name="name" type="text" class="feedback-input" placeholder="Name" />
                 <input id="email" name="email" type="email" class="feedback-input" placeholder="Email" />
                 <textarea id="message" name="message" class="feedback-input" placeholder="Message"></textarea>

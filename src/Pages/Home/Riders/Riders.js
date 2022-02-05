@@ -11,6 +11,8 @@ const Riders = () => {
             .then(data => setRiders(data));
     }, [])
 
+    console.log(riders);
+
     return (
         <div id="riders">
             <div class="card bg-dark text-white mb-5">

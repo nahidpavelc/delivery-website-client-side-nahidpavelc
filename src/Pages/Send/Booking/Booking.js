@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
 import AddDelivery from '../../AddDelivery/AddDelivery';
+import './Booking.css'
 
 const Booking = () => {
     const { serviceId } = useParams();
@@ -8,25 +9,28 @@ const Booking = () => {
 
     useEffect(() => {
         // fetch(`https://fierce-sierra-61655.herokuapp.com/services/${serviceId}`)
-        fetch(`http://localhost:5000/services/${serviceId}`)
+        fetch(`https://fierce-sierra-61655.herokuapp.com/services/${serviceId}`)
             .then(res => res.json())
             .then(data => setService(data))
     }, [])
 
-    const { name, img, detail } = service;
+    const { name, img, detail, _id } = service;
 
     return (
-        <div className="container">
-            <div class="card m-3" >
-                <div class="row g-0">
-                    <div class="col-md-4">
-                        <img src={img} class="img-fluid rounded-start" alt="..." />
+        <div className="container py-5">
+            <div class="card my-5" >
+                <div class="row g-0 add-review">
+                    <div class="col-sm-12 col-md-12 col-lg-6 pt-4">
+                        <h5 class="card-title" className='mt-2 mb-4 booking-text'>We Provide Fast Service</h5>
+                        <img src={img} class="img-fluid rounded-start service-img" alt="..." />
                     </div>
-                    <div class="col-md-8">
+                    <div class="col-sm-12 col-md-12 col-lg-6">
                         <div class="card-body">
-                            <h5 class="card-title">{name}</h5>
-                            <p class="card-text">{detail}</p>
-                            <AddDelivery></AddDelivery>
+                            {/* <p class="card-text">{detail}</p> */}
+                            <AddDelivery
+                                key={service._id}
+                                service={service}
+                            ></AddDelivery>
                         </div>
                     </div>
                 </div>

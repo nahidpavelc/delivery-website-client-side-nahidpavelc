@@ -7,7 +7,7 @@ const Menu = () => {
         <div>
             <div className="d-flex justify-content-center">
                 <Nav.Link as={HashLink} to="/AddService">Add</Nav.Link>
-                <Nav.Link as={HashLink} to="/Update">Update</Nav.Link>
+
                 <Nav.Link as={HashLink} to="/Delete">Delete</Nav.Link>
             </div>
         </div>

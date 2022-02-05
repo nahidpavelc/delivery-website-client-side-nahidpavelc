@@ -26,7 +26,7 @@ const Login = () => {
     return (
         <div>
             <body>
-                <div class="container">
+                <div class="container mt-5">
                     <div class="row">
                         <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
                             <div class="card border-0 shadow rounded-3 my-5">
@@ -49,7 +49,7 @@ const Login = () => {
                                             </label>
                                         </div>
                                         <div class="d-grid">
-                                            <button class="btn btn-success btn-login text-uppercase fw-bold" type="submit">Please Login</button>
+                                            <button class="btn btn-success btn-login text-uppercase fw-bold" type="submit button">Please Login</button>
                                         </div>
                                         <hr class="my-4" />
                                         <div class="d-grid mb-2">

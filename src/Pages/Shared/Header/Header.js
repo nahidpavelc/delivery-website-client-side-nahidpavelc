@@ -1,19 +1,21 @@
 import React from 'react';
-import { Button, Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
+import { Button, Container, Nav, Navbar, NavDropdown, MenuItem, Dropdown, NavItem, DropdownButton } from 'react-bootstrap';
 import useAuth from '../../../hooks/useAuth';
 import logo1 from '../../../images/food-delivery-logo.png';
 import logo2 from '../../../images/icon/icon (2).png';
-import logo3 from '../../../images/icon/icon (3).png';
 import logo5 from '../../../images/icon/icon (4).png';
 import { HashLink } from 'react-router-hash-link';
-import Dropdown from '@restart/ui/esm/Dropdown';
+import './Header.css';
+
 
 const Header = () => {
-    const { user, logOut } = useAuth();
+    const { user, logOut, photoURL } = useAuth();
+    const data = useAuth();
+    console.log(data);
 
     return (
         <>
-            <Navbar expand="lg" bg="dark" variant="dark">
+            <Navbar className='py-0 fixed-top' expand="lg" bg="dark" variant="dark">
                 <Container>
                     <Navbar.Brand href="#home"><img
                         alt="Logo"
@@ -27,35 +29,54 @@ const Header = () => {
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
 
-                        <Nav className="me-auto">
-                            <Nav.Link as={HashLink} to="/home#home">Home</Nav.Link>
-                            <Nav.Link as={HashLink} to="/home#services">Services</Nav.Link>
-                            <Nav.Link as={HashLink} to="/Riders">Riders</Nav.Link>
-                            <Nav.Link as={HashLink} to="/aboutus">About us</Nav.Link>
+                        <Nav className="me-auto" id="d-flex align-items-center nav-3">
+                            <Nav.Link className='link-3 text-white' as={HashLink} to="/home#home">Home</Nav.Link>
+                            <Nav.Link className='link-3 text-white' as={HashLink} to="/home#services">Services</Nav.Link>
+                            <Nav.Link className='link-3 text-white' as={HashLink} to="/aboutus">About us</Nav.Link>
                         </Nav>
 
-                        <Nav>
-                            <Nav.Link as={HashLink} to="/addservice" className="fw-bold text-danger" style={{ paddingTop: 19 }}
-                            >Admin</Nav.Link>
+                        <Nav id="nav-3">
+                            {user?.email && <Nav.Link as={HashLink} to="/addservice" className=" text-danger d-flex align-items-center link-3" style={{}}>
+                                <span className="text-white">ADMIN</span>
+                            </Nav.Link>}
 
                             {user?.email ?
-                                <button className="btn btn-success">
-                                    <NavDropdown title={user?.displayName} id="navbarScrollingDropdown">
-                                        <Nav.Link as={HashLink} to="/Services">
-                                            <img className="ms-1" style={{ width: "25px" }} src={logo5} alt="" />
-                                            <span className="text-dark">Order now</span>
-                                        </Nav.Link>
+                                <Navbar.Collapse id="basic-navbar-nav">
+                                    <Nav className="me-auto" id="nav-3">
+                                        <NavDropdown
+                                            title={
+                                                <div className="pull-left">
+                                                    <img className="rounded-circle"
+                                                        src={user.photoURL}
+                                                        alt="user pic"
+                                                        height="40"
+                                                        width="40"
+                                                    />
+                                                    {user.username}
+                                                </div>
+                                            }
+                                            id="basic-nav-dropdown">
 
-                                        <Nav.Link as={HashLink} to="/MyCart">
-                                            <img className="ms-1" style={{ width: "25px" }} src={logo2} alt="" />
-                                            <span className="text-dark">My Orders</span>
-                                        </Nav.Link>
-                                        <Nav.Link as={HashLink} to="/">
-                                            <Button onClick={logOut} className="btn btn-warning">Logout</Button>
-                                        </Nav.Link>
+                                            <Nav.Link className='link-3'>
+                                                <span className="text-danger fw-bold">{user.displayName}</span>
+                                            </Nav.Link>
 
-                                    </NavDropdown>
-                                </button>
+                                            <NavDropdown.Divider />
+                                            <Nav.Link className='link-3' as={HashLink} to="/Services">
+                                                <span className="text-dark">Order now</span>
+                                            </Nav.Link>
+                                            <Nav.Link className='link-3' as={HashLink} to="/myOrder">
+                                                <span className="text-dark">My Orders</span>
+                                            </Nav.Link>
+                                            <Nav.Link className='link-3' as={HashLink} to="/MyCart">
+                                                <span className="text-dark">Manage-Orders</span>
+                                            </Nav.Link>
+                                            <Nav.Link as={HashLink} to="/">
+                                                <Button onClick={logOut} variant="warning">Logout</Button>
+                                            </Nav.Link>
+                                        </NavDropdown>
+                                    </Nav>
+                                </Navbar.Collapse>
                                 :
                                 <Nav.Link as={HashLink} to="/Login">
                                     <Button className="btn btn-success">Login</Button>
