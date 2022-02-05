@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import MyCartCard from '../MyCartCard/MyCartCard';
+import Header from '../Shared/Header/Header';
+import Loader from '../Shared/Loader/Loader';
 import './MyCart.css';
 
 const MyCart = () => {
@@ -28,29 +30,32 @@ const MyCart = () => {
                 }
             })
     }
-
     // const handleConfirm = () => {
     //     alert("Order Confirmed");
     // }
 
     return (
-        <div className="container">
-            <h2 className='my-4'>Manage All <span>Orders</span> </h2>
-
-            <div class="row row-cols-1 row-cols-md-3 g-4">
-                {
-                    orders.map(order =>
-                        <MyCartCard
-                            key={order._id}
-                            order={order}
-                            handleDelete={handleDelete}
-                        ></MyCartCard>
-
-                    )
-                }
-
+        <>
+            <Header />
+            <div className="container pt-5">
+                <h2 className='m-5'>Manage All <span>Orders</span> </h2>
+                {orders.length === 0 ? (
+                    <Loader />
+                ) : (
+                    <div class="row row-cols-1 row-cols-md-3 g-4">
+                        {
+                            orders.map(order =>
+                                <MyCartCard
+                                    key={order._id}
+                                    order={order}
+                                    handleDelete={handleDelete}
+                                ></MyCartCard>
+                            )
+                        }
+                    </div>
+                )}
             </div>
-        </div>
+        </>
     );
 };
 

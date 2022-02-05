@@ -1,9 +1,7 @@
 import React from 'react';
-import { Button, Container, Nav, Navbar, NavDropdown, MenuItem, Dropdown, NavItem, DropdownButton } from 'react-bootstrap';
+import { Button, Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
 import useAuth from '../../../hooks/useAuth';
 import logo1 from '../../../images/food-delivery-logo.png';
-import logo2 from '../../../images/icon/icon (2).png';
-import logo5 from '../../../images/icon/icon (4).png';
 import { HashLink } from 'react-router-hash-link';
 import './Header.css';
 

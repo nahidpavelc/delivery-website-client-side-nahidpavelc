@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from 'react';
+import Header from '../../Shared/Header/Header';
+import Loader from '../../Shared/Loader/Loader';
 import Menu from '../Menu/Menu';
 
 const Delete = () => {
@@ -29,23 +31,30 @@ const Delete = () => {
 
 
     return (
-        <div className="container">
-            <Menu></Menu>
-            <h2>Delete Services</h2>
-            <div class="row row-cols-1 row-cols-md-2 g-4">
-                {
-                    services.map(service => <div class="col" key={service._id}>
-                        <div class="card">
-                            <img src={service.img} class="card-img-top" alt="..." />
-                            <div class="card-body">
-                                <h5 class="card-title">{service.name}</h5>
-                                <button onClick={() => handleDelete(service._id)} className="btn btn-danger">Delete</button>
-                            </div>
-                        </div>
-                    </div>)
-                }
-            </div>
-        </div >
+        <>
+            <Header />
+            <div className="container pt-5">
+                <Menu></Menu>
+                <h2 className='my-5'>Delete Services</h2>
+                {services.length === 0 ? (
+                    <Loader />
+                ) : (
+                    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+                        {
+                            services.map(service => <div class="col" key={service._id}>
+                                <div class="card">
+                                    <img src={service.img} class="card-img-top" alt="..." />
+                                    <div class="card-body">
+                                        <h5 class="card-title">{service.name}</h5>
+                                        <button onClick={() => handleDelete(service._id)} className="btn btn-danger">Delete</button>
+                                    </div>
+                                </div>
+                            </div>)
+                        }
+                    </div>
+                )}
+            </div >
+        </>
     );
 };
 
