@@ -34,9 +34,10 @@ const Header = () => {
                         </Nav>
 
                         <Nav id="nav-3">
-                            {user?.email && <Nav.Link as={HashLink} to="/addservice" className=" text-danger d-flex align-items-center link-3" style={{}}>
+
+                            {/* {user?.email && <Nav.Link as={HashLink} to="/addservice" className=" text-danger d-flex align-items-center link-3" style={{}}>
                                 <span className="text-white">ADMIN</span>
-                            </Nav.Link>}
+                            </Nav.Link>} */}
 
                             {user?.email ?
                                 <Navbar.Collapse id="basic-navbar-nav">
