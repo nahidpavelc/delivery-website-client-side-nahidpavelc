@@ -6,15 +6,15 @@ import Menu from '../Menu/Menu';
 const Delete = () => {
     const [services, setServices] = useState([])
     useEffect(() => {
-        // fetch('https://fierce-sierra-61655.herokuapp.com/services')
-        fetch('https://fierce-sierra-61655.herokuapp.com/services')
+        // fetch('https://bd-go.onrender.com/services')
+        fetch('https://bd-go.onrender.com/services')
             .then(res => res.json())
             .then(data => setServices(data))
     }, [])
 
     const handleDelete = id => {
-        // const url = `https://fierce-sierra-61655.herokuapp.com/services/${id}`;
-        const url = `https://fierce-sierra-61655.herokuapp.com/services/${id}`;
+        // const url = `https://bd-go.onrender.com/services/${id}`;
+        const url = `https://bd-go.onrender.com/services/${id}`;
         fetch(url, {
             method: 'DELETE'
         })

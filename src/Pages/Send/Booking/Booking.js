@@ -9,8 +9,8 @@ const Booking = () => {
     const [service, setService] = useState({});
 
     useEffect(() => {
-        // fetch(`https://fierce-sierra-61655.herokuapp.com/services/${serviceId}`)
-        fetch(`https://fierce-sierra-61655.herokuapp.com/services/${serviceId}`)
+        // fetch(`https://bd-go.onrender.com/services/${serviceId}`)
+        fetch(`https://bd-go.onrender.com/services/${serviceId}`)
             .then(res => res.json())
             .then(data => setService(data))
     }, [])

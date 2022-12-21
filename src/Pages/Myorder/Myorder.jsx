@@ -12,7 +12,7 @@ const Myorder = () => {
     const { user } = useAuth();
 
     useEffect(() => {
-        fetch(`https://fierce-sierra-61655.herokuapp.com/orders?email=${user.email}`)
+        fetch(`https://bd-go.onrender.com/orders?email=${user.email}`)
             .then(res => res.json())
             .then(data => setOrders(data));
 

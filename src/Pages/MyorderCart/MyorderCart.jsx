@@ -8,7 +8,7 @@ const MyorderCart = ({ order }) => {
 
     const handleStatusUpdate = (id) => {
         axios
-            .put(`https://fierce-sierra-61655.herokuapp.com/orders/${id}`, {
+            .put(`https://bd-go.onrender.com/orders/${id}`, {
                 statusUpdate: 'CANCELED',
             })
             .then((res) => {

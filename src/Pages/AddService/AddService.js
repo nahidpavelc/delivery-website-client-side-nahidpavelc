@@ -9,8 +9,8 @@ const AddService = () => {
     const { register, handleSubmit } = useForm();
     const onSubmit = data => {
         console.log(data);
-        // axios.post('https://fierce-sierra-61655.herokuapp.com/services', data)
-        axios.post('https://fierce-sierra-61655.herokuapp.com/services', data)
+        // axios.post('https://bd-go.onrender.com/services', data)
+        axios.post('https://bd-go.onrender.com/services', data)
             .then(res => {
                 if (res.data.insertedId) {
                     alert('Added Successfully');
