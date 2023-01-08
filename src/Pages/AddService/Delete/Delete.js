@@ -36,9 +36,9 @@ const Delete = () => {
             <div className="container pt-5">
                 <Menu></Menu>
                 <h2 className='my-5'>Delete Services</h2>
-                {services.length === 0 ? (
+                {/* {services.length === 0 ? (
                     <Loader />
-                ) : (
+                ) : ( */
                     <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
                         {
                             services.map(service => <div class="col" key={service._id}>
@@ -52,7 +52,7 @@ const Delete = () => {
                             </div>)
                         }
                     </div>
-                )}
+                }
             </div >
         </>
     );
