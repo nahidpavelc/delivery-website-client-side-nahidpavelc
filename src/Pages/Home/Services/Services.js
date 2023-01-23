@@ -8,7 +8,7 @@ const Services = () => {
 
   useEffect(() => {
     // fetch('https://bd-go.onrender.com/services')
-    fetch('https://bd-go.onrender.com/services')
+    fetch('https://delivery-web-server-nahidpavelc.vercel.app/services')
       .then(res => res.json())
       .then(data => setServices(data));
   }, [])
@@ -18,15 +18,18 @@ const Services = () => {
       <Header />
       <div className="container pt-5" id="services">
         <h2 className="m-5"><span>Delivery</span>  Services</h2>
-
-        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
-          {
-            services.map(service => <Service
-              key={service.id}
-              service={service}
-            ></Service>)
-          }
-        </div>
+        {services.length === 0 ? (
+          <Loader />
+        ) : (
+          <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+            {
+              services.map(service => <Service
+                key={service.id}
+                service={service}
+              ></Service>)
+            }
+          </div>
+        )}
       </div >
     </>
 

@@ -31,7 +31,7 @@ const AddDelivery = ({ service }) => {
         formData.append('phone', phone);
         formData.append('weight', weight);
 
-        fetch('https://bd-go.onrender.com/orders', {
+        fetch('https://delivery-web-server-nahidpavelc.vercel.app/orders', {
             method: 'POST',
             body: formData
         })

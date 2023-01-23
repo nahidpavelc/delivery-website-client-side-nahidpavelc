@@ -7,14 +7,14 @@ const Delete = () => {
   const [services, setServices] = useState([])
   useEffect(() => {
     // fetch('https://bd-go.onrender.com/services')
-    fetch('https://bd-go.onrender.com/services')
+    fetch('https://delivery-web-server-nahidpavelc.vercel.app/services')
       .then(res => res.json())
       .then(data => setServices(data))
   }, [])
 
   const handleDelete = id => {
     // const url = `https://bd-go.onrender.com/services/${id}`;
-    const url = `https://bd-go.onrender.com/services/${id}`;
+    const url = `https://delivery-web-server-nahidpavelc.vercel.app/${id}`;
     fetch(url, {
       method: 'DELETE'
     })
